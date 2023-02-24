@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: aliceblue;
+    font-family: sans-serif;
+}
+
+.form{
+    position: absolute;
+    /* top: 30%; */
+    box-shadow: 0px 4px 8px rgba( 0, 0, 0 ,0.3),
+                0px -4px 4px rgb(255,255,255);
+    background-color: transparent;
+    border-radius: 10px;
+    width: 400px;
+}
+.input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    border: none;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.input::placeholder{
+    color: lightgrey;
+    letter-spacing: 2px;
+}
+.options{
+    display: flex;
+    gap: 1rem;
+}
+
+.list li{
+    list-style: none;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    border: 1px solid darkgray;
+    padding: 20px;
+    position: relative;
+}
+.list li .check{
+    color: rgb(35, 208, 35);
+    position: absolute;
+    right: 40px;
+}
+.list li .trash{
+    color: rgb(255, 2, 2);
+    position: absolute;
+    right: 20px;
+}
+
+.list li .check,
+.list li .trash{
+    cursor: pointer;
+}
+.list li.checked{
+    color: darkgrey;
+    text-decoration: line-through;
+}
+
+.list li.checked .check{
+    color: darkgray;
+}
+
+@media (width <= 450px){
+    .form{
+        width: 300px;
+    }
+}
